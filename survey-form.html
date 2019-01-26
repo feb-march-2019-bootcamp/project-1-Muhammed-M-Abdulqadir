@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CodePen - FCC: Survey Form</title>
+</head>
+
+<style>
+
+    body{
+            background-color: #A9D7D1;
+            overflow: auto;
+            height: 100%;
+            font-family: 'raleway', Helvetica, sans-serif;
+            text-align: center;
+        }
+
+        #form-container{
+            font-size: 120%;
+            padding: 20px 0;
+            width: 75%;
+            background-color:#FAFAFA;
+            margin: 0 auto;
+            border-radius: 2px;
+            height: 50em;
+        }        
+
+        #description{
+            text-align: center;
+            color: rgb(51, 51, 51);
+        }
+
+        form{
+            margin-top: 2rem;
+        }
+
+        .input-container{
+            width: 100%;
+            height: 3em;
+            margin: 1em 0;
+            display: block;
+        }
+
+        .right-inputs{
+            text-align: left;
+            width: 50%;
+            float: left;
+            border-radius: 2px;
+            display: block;
+        }
+
+        label{
+            display: inline;
+            margin-right: 1em;
+        }
+        
+        .labels-container{
+            padding: 0 1em;
+            width: 46%;
+            float: left;
+            text-align: right;
+            display: inline-block;
+        }
+
+        #comments{
+            resize: vertical;
+        }
+
+        #submit{
+            width: 100px;
+            height: 3em;
+            background-color: rgb(82, 207, 238);
+            border-radius: 4px;
+            color: white;
+            font-size: 1em;
+            margin-top: 2rem;
+        }
+
+        #name-label{
+            width: 20em;
+            height: 2em;
+        }
+
+        #email-label{
+            width: 20em;
+            height: 2em;
+        }
+
+        #number-label{
+            width: 20em;
+            height: 2em;
+        }
+
+    </style>
+
+<body>
+
+
+    <h1 id="title">Survey form</h1>
+
+    <div id="form-container">
+
+        <p id="description">Let us know how we can improve freeCodeCamp </p>
+
+        <form action="" id="survey-form">
+
+            <!-- <br style="clear: both;"> -->
+            <div id="name-container" class="input-container">
+                <div class='labels-container'>
+                    <label for="name-label">* Name:</label>
+                </div>
+
+                <div class="right-inputs">
+                    <input type="text" id="name-label" placeholder="Enter your name" required>
+                </div>
+
+            </div>
+
+            <div id="email-container" class="input-container">
+                <div class='labels-container'>
+
+                    <label for="email-label">* Email:</label>
+                </div>
+
+                <div class="right-inputs">
+                    <input type="text" id="email-label" placeholder="Enter your email" required>
+                </div>
+            </div>
+
+            <div id="age-container" class="input-container">
+                <div class='labels-container'>
+                    <label for="number-label">* Age:</label>
+                </div>
+
+                <div class="right-inputs">
+                    <input type="number" min="1" max="125" id="number-label" placeholder="Age">
+                </div>
+            </div>
+
+            <div id="dropdown-container" class="input-container">
+                <div class='labels-container'>
+                    <label for="dropdown">Which option best describes your current role?</label>
+                </div>
+
+                <div class="right-inputs">
+
+                    <select name="dropdown" id="dropdown">
+                        <option disabled>Select an option</option>
+                        <option value="student">Student</option>
+                        <option value="full-time-job">Full Time Job</option>
+                        <option value="full-time-learner">Full Time Learner</option>
+                        <option value="prefer-not-to-say">Prefer not to say</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="input-container">
+                <div class="labels-container">
+                    <label for="radio">How likely is that you would recommend freeCodeCamp to a friend?</label>
+                </div>
+
+                <div class="right-inputs">
+
+                    <div>
+                        <label for="definitly">
+                            <input type="radio" id="definitly" value="definitly" name="radio">
+                            definitly</label>
+                    </div>
+
+                    <div>
+                        <label for="Maybe">
+                            <input type="radio" id="Maybe" value="definitly" name="radio">
+                            Maybe</label>
+                    </div>
+
+                    <div>
+                        <label for="Not sure">
+                            <input type="radio" id="Not sure" value="definitly" name="radio">
+                            Not sure</label>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div id="dropdown-container" class="input-container">
+                <div class='labels-container'>
+                    <label for="dropdown">What do you like most in FCC:</label>
+                </div>
+
+                <div class="right-inputs">
+
+                    <select name="dropdown" id="dropdown">
+                        <option value="select an option">Select an option</option>
+                        <option value="challenges">Challenges</option>
+                        <option value="projects">Projects</option>
+                        <option value="community">Community</option>
+                        <option value="open source">Open Source</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="input-container">
+
+                <div class="labels-container">
+                    <label>Things that should be improved in the future
+                        (Check all that apply):</label>
+                </div>
+
+                <div class="right-inputs">
+
+                    <div>
+                        <label>
+                            <input type="checkbox">
+                            Front-end Projects</label>
+                    </div>
+
+                    <div>
+                        <label>
+                            <input type="checkbox">
+                            Back-end Projects</label>
+                    </div>
+
+                    <div>
+                        <label>
+                            <input type="checkbox">
+                            Data Visualization</label>
+                    </div>
+
+                    <div>
+                        <label>
+                            <input type="checkbox">
+                            Challenges</label>
+                    </div>
+
+                    <div>
+                        <label>
+                            <input type="checkbox">
+                            Open Source Community</label>
+                    </div>
+
+                    <div>
+                        <label>
+                            <input type="checkbox">
+                            Gitter help rooms</label>
+                    </div>
+
+                    <div>
+                        <label>
+                            <input type="checkbox">
+                            Videos</label>
+                    </div>
+
+                    <div>
+                        <label>
+                            <input type="checkbox">
+                            City Meetups</label>
+                    </div>
+
+                    <div>
+                        <label>
+                            <input type="checkbox">
+                            Wiki</label>
+                    </div>
+
+                    <div>
+                        <label>
+                            <input type="checkbox">
+                            Forum</label>
+                    </div>
+
+                    <div>
+                        <label>
+                            <input type="checkbox">
+                            Additional Courses</label>
+                    </div>
+                </div>
+
+            </div>
+
+            <div id="email-container" class="input-container">
+                <div class='labels-container'>
+
+                    <label for="comments">Any Comments or Suggestions?</label>
+                </div>
+
+                <div class="right-inputs">
+                    <textarea name="comments" id="comments" cols="38" rows="3" placeholder="Enter your comment here"></textarea>
+                </div>
+            </div>
+
+            <button type="submit" id="submit">Submit</button>
+        </form>
+    </div>
+
+</body>
+
+</html>
